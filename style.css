@@ -1,0 +1,67 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--bg-header);
+  color: var(--text-header);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-header: #f0f0f0;
+    --text-header: #222;
+    --link-color: #007acc;
+    --bg-body: #ffffff;
+    --text-body: #333;
+  }
+
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+  }
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-header: #1e1e1e;
+    --text-header: #eee;
+    --link-color: #4eaaff;
+    --bg-body: #121212;
+    --text-body: #ccc;
+  }
+
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+  }
+}
+
+/* Links hover */
+nav a:hover, section a:hover {
+  text-decoration: underline;
+}
